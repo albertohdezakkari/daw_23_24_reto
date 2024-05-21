@@ -101,7 +101,7 @@ public class PeliculaDAO implements DAO<Pelicula, Integer> {
         }
         return peliculas;
     }
-     public ArrayList<Pelicula> findAllByCategory(String category) {
+    public ArrayList<Pelicula> findAllByCategory(String category) {
         ArrayList<Pelicula> peliculas = new ArrayList<>();
         String sql = SQL_FIND_BY_FILTER 
                     + " WHERE c.nombre like '%" + category+ "%'";
@@ -136,7 +136,6 @@ public class PeliculaDAO implements DAO<Pelicula, Integer> {
         }
         return peliculas;
     }
-
     public ArrayList<Pelicula> filterType(Pelicula bean, String tipo) {
         ArrayList<Pelicula> peliculas = new ArrayList<>();
         String sql = (SQL_SEARCH_Start+tipo+SQL_SEARCH_Final);
@@ -202,7 +201,6 @@ public class PeliculaDAO implements DAO<Pelicula, Integer> {
         }
         return peliculas;
     }
-
     @Override
     public int add(Pelicula bean) {
         int resp = 0;
@@ -232,7 +230,6 @@ public class PeliculaDAO implements DAO<Pelicula, Integer> {
         }
         return resp;
     }
-
     @Override
     public int delete(Integer id) {
         int resp = 0;
@@ -254,7 +251,6 @@ public class PeliculaDAO implements DAO<Pelicula, Integer> {
         }
         return resp;
     }
-
     @Override
     public int update(Pelicula bean) {
         int resp = 0;

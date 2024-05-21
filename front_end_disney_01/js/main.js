@@ -11,5 +11,13 @@ async function cargarPeliculasDisney() {
     appContainer.appendChild(movieElement);
   });
 }
+async function login() {
+  const movies = await MovieService.listarPeliculas();
+  movies.forEach((movieData) => {
+    const movieComponent = new MovieComponent(movieData);
+    const movieElement = movieComponent.render();
+    appContainer.appendChild(movieElement);
+  });
+}
 
 window.addEventListener("load", cargarPeliculasDisney);
